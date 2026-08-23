@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copy as Markdown</title>
+<style>
+:root { --bg:#0f172a; --panel:#1e293b; --text:#e2e8f0; --muted:#94a3b8; --accent:#22d3ee; --ok:#22c55e; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); font-size:14px; min-width:280px; }
+header { padding:16px; border-bottom:1px solid #334155; display:flex; align-items:center; gap:10px; }
+header svg { width:24px; height:24px; color:var(--accent); flex-shrink:0; }
+header h1 { margin:0; font-size:15px; font-weight:600; }
+main { padding:16px; }
+.desc { color:var(--muted); font-size:13px; margin-bottom:16px; }
+.shortcuts { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin-bottom:16px; }
+.kbd { background:var(--bg); border:1px solid #334155; border-radius:6px; padding:4px 8px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; color:var(--accent); }
+.kbd span { color:var(--muted); }
+.actions { display:flex; gap:8px; }
+button { flex:1; padding:10px; border:none; border-radius:8px; font-size:13px; font-weight:600; cursor:pointer; transition:background 0.1s; }
+.btn-primary { background:var(--accent); color:#0f172a; }
+.btn-primary:hover { background:#06b6d4; }
+.btn-secondary { background:#334155; color:var(--text); }
+.btn-secondary:hover { background:#475569; }
+footer { padding:12px 16px; border-top:1px solid #334155; text-align:center; color:var(--muted); font-size:11px; }
+footer a { color:var(--accent); text-decoration:none; }
+</style>
+</head>
+<body>
+<header>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+<h1>Copy as Markdown</h1>
+</header>
+<main>
+<p class="desc">Right-click any element → <strong>Copy as Markdown</strong></p>
+<div class="shortcuts">
+<div><kbd class="kbd">Right-click</span> → Copy as Markdown</kbd></div>
+<div><kbd class="kbd"><span>Alt</span>+<span>M</span></kbd> Quick copy selection</div>
+</div>
+<div class="actions">
+<button id="options" class="btn-secondary">Options</button>
+<button id="testCopy" class="btn-primary">Test Copy</button>
+</div>
+</main>
+<footer>v0.1.0 · <a href="https://github.com/trenysx/copy-as-markdown" target="_blank">GitHub</a></footer>
+<script src="popup.js"></script>
+</body>
+</html>
