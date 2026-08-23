@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Copy as Markdown",
+  "version": "0.1.0",
+  "description": "Right-click any element → copy as clean Markdown. Preserves structure, links, images, code blocks.",
+  "permissions": ["contextMenus", "scripting", "clipboardWrite"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Copy as Markdown"
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "32": "assets/icon32.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}
